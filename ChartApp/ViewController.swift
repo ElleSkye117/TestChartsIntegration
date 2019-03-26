@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class ViewController: UIViewController, ChartViewDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet var chartView: LineChartView!
 
@@ -17,9 +17,8 @@ class ViewController: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        chartView.delegate = self
         chartView.dragEnabled = false
-        chartView.setScaleEnabled(true)
+        chartView.setScaleEnabled(false)
         chartView.drawGridBackgroundEnabled = false
         chartView.minOffset = 0.0
         chartView.chartDescription = nil
